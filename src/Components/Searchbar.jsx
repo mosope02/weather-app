@@ -4,8 +4,11 @@ const svg = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 
 const Searchbar = ({value, onChange, onSubmit }) => {
   return (
     <div className=' bg-slate-100 w-10/12 mx-auto  rounded-3xl h-10 pt-[9px] lg:pt-[6px] pl-2'>
-            <span className=''>{svg}</span>
-            <span><input type='text' value={value} onChange={onChange} onSubmit={onSubmit} className=' w-10/12 lg:w-11/12 mx-auto bg-inherit outline-none ml-2' /> </span>
+
+            <form onSubmit={onSubmit}>
+              <span className=''>{svg}</span>
+              <span><input type='text' value={value} placeholder='Enter a city e.g Lagos' onChange={onChange} className=' w-10/12 lg:w-11/12 mx-auto bg-inherit outline-none ml-2' /> </span>
+            </form>
     </div>
   )
 }

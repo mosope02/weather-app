@@ -1,4 +1,2 @@
-const url = process.env.REACT_APP_API_URL   
-const key = process.env.REACT_APP_API_KEY
 
-export const apiCall = (loca) =>{  return `${url}?q=${loca}&appid=${key}`}
+export const apiCall = (url, loca, key) =>{return `${url}?q=${loca}&appid=${key}&units=metric`}
