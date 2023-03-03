@@ -24,11 +24,9 @@ function App() {
         const response = await axios(apiCall(url, search, key))
         setData(response)
         setError({})
-        console.log(response);
       } catch (error) {
         setError(error.response)
         setData({})
-        console.log(error.response);
       }
     }
     
