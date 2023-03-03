@@ -2,7 +2,7 @@ import React from 'react'
 import moment from 'moment'
 
 export const Localinfo = ({Localinfo}) => {
-    const date = moment(Localinfo.dt).format("dddd, Do MMMM")
+    const date = moment(Localinfo.dt * 1000).format("dddd, Do MMMM")
     const time= moment((Localinfo.dt + Localinfo.timezone -3600)*1000).format("HH:mm")
   return (
     //container for localinfo
